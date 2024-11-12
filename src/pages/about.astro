@@ -1,0 +1,72 @@
+---
+import "../styles/global.css";
+const pageTitle = "Aboutページ";
+
+const identity = {
+    author: "shincode",
+    country: "日本",
+    occupation: "WebEngineer",
+    hobbies: ["コーディング", "ジム", "読書"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Next.js"];
+
+const skillColor = "green";
+const fontWeight = "bold";
+const textCase = "uppercase";
+---
+
+<style define:vars={{ skillColor, fontWeight, textCase }}>
+    h1 {
+        color: purple;
+        font-size: 4rem;
+    }
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+    }
+</style>
+
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <h1>{pageTitle}</h1>
+        <h2>
+            今回はAstroフレームワークを使って高速で動くブログを作っていきたいと思います。
+        </h2>
+        <p>
+            いろんなフロントエンドの知識をつけて、これからも学習を頑張っていきます。
+        </p>
+        <p>私について</p>
+        <ul>
+            <li>私の名前は{identity.author}です。</li>
+            <li>
+                私は{identity.country}に住んでいます。職業は{
+                    identity.occupation
+                }
+            </li>
+            {
+                identity.hobbies.length >= 2 && (
+                    <li>
+                        私の趣味は2つあって1つは{identity.hobbies[0]}と
+                        {identity.hobbies[1]}
+                    </li>
+                )
+            }
+        </ul>
+        <p>私のスキル</p>
+        <ul>
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
+        </ul>
+    </body>
+</html>
