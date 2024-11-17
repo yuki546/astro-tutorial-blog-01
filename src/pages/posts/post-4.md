@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "3回目の投稿"
+title: "4回目の投稿"
 pubDate: 2023-12-27
-description: "これは3回目の投稿です。"
+description: "これは4回目の投稿です。"
 author: "ShinCode"
 image:
   url: "https://docs.astro.build/assets/full-logo-light.png"
   alt: "Astroのロゴ"
-tags: ["astro", "blog", "programming", "javascript"]
+tags: ["astro", "blog", "programming", "python", "webframework"]
 ---
 
-これは 3 回目の投稿です。
+これは 4 回目の投稿です。
