@@ -2,7 +2,7 @@
 title: "3回目の投稿"
 pubDate: 2023-12-27
 description: "これは3回目の投稿です。"
-author: "ShinCode"
+author: "Yuki"
 image:
   url: "https://docs.astro.build/assets/full-logo-light.png"
   alt: "Astroのロゴ"
