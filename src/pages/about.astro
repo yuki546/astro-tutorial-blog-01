@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Aboutページ";
+const pageDescription = "このサイトはYukiのブログサイトとなっています。";
 
 const identity = {
   author: "shincode",
@@ -29,7 +30,7 @@ const textCase = "uppercase";
   }
 </style>
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <h2>
     今回はAstroフレームワークを使って高速で動くブログを作っていきたいと思います。
   </h2>
