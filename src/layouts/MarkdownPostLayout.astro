@@ -1,4 +1,5 @@
 ---
+import { fade } from "astro:transitions";
 import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
@@ -24,7 +25,9 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
   <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
+  <p>
+    <em>{frontmatter.description}</em>
+  </p>
   <p>執筆者:{frontmatter.author}</p>
   <img src={frontmatter.image.url} alt={frontmatter.alt} />
   <slot />
